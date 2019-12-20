@@ -53,8 +53,8 @@ function ifNoResults() {
         resultContainer.style.textAlign = "center";
         resultContainer.style.fontSize = "30px";
         resultContainer.style.padding = "100px";
-        resultContainer.style.textShadow = "2px 2px black";
-        resultContainer.style.color =  "rgb(194, 73, 102)";
+        resultContainer.style.margin = "20px";
+        resultContainer.style.borderRadius = "20px";
 }
 
 function clearResultContainer(obj) {
