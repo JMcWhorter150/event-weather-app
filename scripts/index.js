@@ -62,17 +62,16 @@ function clearResultContainer(obj) {
     resultContainer.textContent = "";
     resultContainer.style.fontSize = "";
     resultContainer.style.padding = "";
-    resultContainer.style.textShadow = "";
-    resultContainer.style.color = "";
+    resultContainer.style.margin = "";
+    resultContainer.style.borderRadius = "";
     return obj;
 }
 
 function waitingAnimation() {
     let resultContainer = document.querySelector(".js-resultContainer");
     resultContainer.textContent = "Fetching your events. Please wait.";
-    resultContainer.style.textAlign = "center";
     resultContainer.style.fontSize = "30px";
     resultContainer.style.padding = "100px";
-    resultContainer.style.textShadow = "2px 2px whitesmoke";
-    resultContainer.style.color =  "rgb(194, 73, 102)";
+    resultContainer.style.margin = "20px";
+    resultContainer.style.borderRadius = "20px";
 }

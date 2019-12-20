@@ -4,6 +4,7 @@
     justify-content: center;
     min-height: 10px;
     padding-bottom: 50px;
+    background-color: #E8B891;
 }
 
 .js-resultCard {
@@ -19,7 +20,8 @@
     box-shadow: 10px 10px 10px rgba(94, 94, 104, 0.5);
     background-blend-mode: screen;
     overflow: auto;
-    background-image: linear-gradient(rgba(155, 232, 251, 0.7),rgba(195, 209, 214, 0.7));
+    background-color:#7383BF;
+    opacity: 0.9;
     border-radius: 5px;
     padding: 5px;
 
@@ -34,7 +36,6 @@
     order: 1;
     margin: 0px;
     font-size: 18px;
-    text-shadow: 2px 2px whitesmoke;
 }
 
 .js-resultCard p {
@@ -49,13 +50,11 @@
     margin: 0px;
     order: -1;
     font-size: 18px;
-    text-shadow: 2px 2px whitesmoke;
 }
 
 .js-resultCard a {
     order: 2;
     color: whitesmoke;
-    text-shadow: 1px 2px black;
     text-decoration-line: none;
 }
 
@@ -90,7 +89,6 @@
 .js-resultCard h1 {
     margin: 0;
     padding: 20px, 0;
-    text-shadow: 2px 2px whitesmoke;
     flex-basis: auto;
     min-width: 0;
     flex-shrink: 2;
@@ -105,5 +103,4 @@
     list-style: none;
     text-align: center;
     color: whitesmoke;
-    text-shadow: 1px 2px black;
 }

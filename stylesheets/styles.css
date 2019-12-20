@@ -4,7 +4,7 @@
     font-style: bold;
     font-family: 'Rubik', sans-serif;
     /* color: rgb(194, 73, 102); */
-    color:  rgb(51, 49, 49);
+    color: #0C0F0F;
     text-align: center;
     
 }
@@ -18,14 +18,24 @@ html{
 body {
     min-height: 100vh;
     height:100%;
-    background-image: url(../images/clouds-1431822.jpg) ;
     background-size: cover;
+    background-color: #578B8B;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-attachment: fixed;
 }
+
+.umbrella-pictureFrame {
+    width: 300px;
+    height: 300px;
+}
+
+.umbrella-pictureFrame img {
+    height: 100%;
+}
+
 
 .footerContainer a {
     text-decoration: none;
@@ -41,35 +51,32 @@ body {
 }
 
 .websiteName {
-    color: rgb(194, 73, 102);
     display: flex;
     font-size: 70px;
-    padding-top: 20px;
-    text-shadow: 2px 2px whitesmoke;
-    
+    padding-top: 20px;    
 }
 
 .websiteDescription {
     display: flex;
-    font-size: 35px;
+    font-size: 20px;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 50px;
     align-items: center;
-    text-shadow: 1px 1px whitesmoke;
-    color: rgb(53, 44, 44);
 }
 
 .userInput {
     padding: 30px;
-    padding-top: 100px;
-    padding-right: 70px;
     font-size: 25px;
-    text-shadow: 1px 1px whitesmoke;
+    background-color: #7383BF;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(94, 94, 104, 0.5);
+    margin: 20px;
 }
 
 #locationInput {
     border-radius: 20px;    
+    box-shadow: 10px 10px 10px rgba(94, 94, 104, 0.5);
 }
 
 #locationInput:focus {
@@ -78,6 +85,11 @@ body {
 
 button {
     border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(94, 94, 104, 0.5);
+}
+
+#button:focus {
+    outline: none;
 }
 
 footer {
@@ -94,12 +106,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     color: black;
-    text-shadow: 1px 1px whitesmoke;
     font-size: 30 px;
     width: 100%;
     /* padding-top: 5px;
     padding-bottom: 5px; */
-    background-image: linear-gradient(rgba(89, 109, 114, 0.7),rgba(63, 73, 77, 0.7));
+    background-color: #E8CB91;
     position:relative;
     bottom: 0%;
 }

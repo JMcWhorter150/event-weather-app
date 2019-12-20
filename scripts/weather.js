@@ -43,7 +43,7 @@ function appendWeathertoCard(str, text, text2, newCard) { // creates div element
 }
 
 function getIcon(obj) { // pulls openweathermap's icon source
-    let icon = "http://openweathermap.org/img/w/" + String(obj.weather[0].icon) + ".png";
+    let icon = "https://openweathermap.org/img/w/" + String(obj.weather[0].icon) + ".png";
     return icon;
 }
 
