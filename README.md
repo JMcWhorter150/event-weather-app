@@ -2,9 +2,9 @@
 
 ## Screenshots:
 
-![Screenshot without results-large](images/screenshot-large.png)
+![HomePageScreenShot](images/ScreenShot.png)
 
-![Screenshot with results-large](images/screenshot-large-with-results.png)
+![WorkingScreenShot](images/WorkingScreenShot.png)
 
 ## What problem our app solves?
 
