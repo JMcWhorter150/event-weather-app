@@ -1,6 +1,7 @@
 function getDate() { // gets current date in ISO format
     const today = new Date();
-    let date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate(); //add one to getMonth because it pulls months 0-11
+    let month = ((today.getMonth() + 1) < 10) ? ("0" + (today.getMonth() + 1)) : (today.getMonth() + 1); //add one to getMonth because it pulls months 0-11 and checks if number less than 10 to add a leading zero
+    let date = today.getFullYear() + "-" + month + "-" + today.getDate(); 
     return date;
 }
 
@@ -13,12 +14,16 @@ function getYelpObj(newUrl) { // does most of the work of the website. Creates c
 }
 
 function addCardsToResultBox(array) { // adds cards, and if no results, displays it
-    if (array.length === 0) {
-        ifNoResults();
-    } else {
+    // console.log(array);
+    if (array.length !== 0) {
+        // console.log('has stuff')
         array.forEach(createCard);
+    } else {
+        // console.log('no results')
+        ifNoResults();
     }
 }
+
 
 function getCurrentTimeString() { // gets ISO formatted current time
     let today1 = new Date();
@@ -34,6 +39,8 @@ function getCurrentTimeString() { // gets ISO formatted current time
 
 function createCard(obj) { // does most of the work of the website by creating cards from data
     if ((extractDate(obj) === getDate()) && (extractTime(obj) < getCurrentTimeString())) { // if current time is past event start time, it doesn't create a card for event
+        // console.log(obj);
+        // console.log(extractDate(obj));
         return
     }
     let resultContainer = document.querySelector(".js-resultContainer");
@@ -53,6 +60,7 @@ function createCard(obj) { // does most of the work of the website by creating c
     appendTextToCard(`Address: ${extractLocation(obj)}`, newCard, "li"); // adds address
     appendLinktoCard(extractLink(obj), newCard); // adds more info link
     resultContainer.appendChild(newCard);
+    // console.log('creating card');
     return obj;
 }
 
@@ -104,6 +112,8 @@ function extractDate(obj) {
     let date = getDate();
     let objDate = obj.time_start;
     objDate = objDate.slice(0, 10);
+    // console.log(objDate);
+    // console.log(date);
     if (objDate < date) {
         return date;
     } else {

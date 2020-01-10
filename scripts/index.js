@@ -41,10 +41,12 @@ function submitYelpCall() {
     let currentTime = getCurrentTime();
     let endTime = getEndTime(currentTime);
     const newUrl = `https://yelp-events-helper.herokuapp.com/${cityName}/${yelpapiKey}/${currentTime}/${endTime}`;
-    // console.log(cityName)
-    // console.log(newUrl)
-    waitingAnimation();
-    getYelpObj(newUrl);
+    if (cityName) {
+        waitingAnimation();
+        getYelpObj(newUrl);
+    } else {
+        ifNoResults();
+    }
 }
 
 function ifNoResults() {
@@ -64,6 +66,7 @@ function clearResultContainer(obj) {
     resultContainer.style.padding = "";
     resultContainer.style.margin = "";
     resultContainer.style.borderRadius = "";
+    // console.log('clearing result container');
     return obj;
 }
 

@@ -88,7 +88,7 @@ button {
     box-shadow: 10px 10px 10px rgba(94, 94, 104, 0.5);
 }
 
-#button:focus {
+button:focus {
     outline: none;
 }
 

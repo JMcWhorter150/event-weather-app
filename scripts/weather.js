@@ -39,6 +39,7 @@ function appendWeathertoCard(str, text, text2, newCard) { // creates div element
     pictureFrame.appendChild(imgEl);
     pictureFrame.appendChild(h4El);
     pictureFrame.appendChild(h3El2);
+    // console.log('appending weather to card');
     newCard.appendChild(pictureFrame);
 }
 
